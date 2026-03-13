@@ -538,6 +538,65 @@ body::before {
         height: 140px;
     }
 }
+/* Icon container styling */
+.icon {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, #8b5cf6, #6366f1);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 24px rgba(139, 92, 246, 0.3);
+    flex-shrink: 0;
+}
+
+/* Header icon images */
+.header-icon {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    filter: brightness(0) invert(1); /* Makes icons white */
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect for header icons */
+.card:hover .header-icon {
+    transform: rotate(5deg) scale(1.1);
+}
+/* Contact icon images */
+.contact-icon {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    margin-right: 4px;
+}
+
+.contact-item:hover .contact-icon {
+    transform: scale(1.15) rotate(-5deg);
+    filter: brightness(1.3);
+}
+
+/* Make sure contact items align properly */
+.contact-item {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 18px 32px;
+    border-radius: 16px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    font-weight: 500;
+    position: relative;
+    overflow: hidden;
+}
     </style>
 </head>
 <body>
@@ -555,7 +614,7 @@ body::before {
 
         <div class="content-grid">
             <div class="card">
-                <h2><span class="icon">👨🏻‍💼</span>Core Expertise</h2>
+                 <h2><span class="icon"><img src="expertise.jpg" alt="Target" class="header-icon"></span>Core Expertise</h2>
                 <div class="skills-grid">
                     <div class="skill-item">
                         <h3>AI Integration</h3>
@@ -577,7 +636,7 @@ body::before {
             </div>
 
             <div class="card">
-                <h2><span class="icon">🥧</span>Focus Areas</h2>
+                <h2><span class="icon"><img src="target-icon.png" alt="Target" class="header-icon"></span>Focus Areas</h2>
                 <ul class="focus-areas">
                     <li>
                         <h3>Machine Learning in Business</h3>
@@ -599,19 +658,22 @@ body::before {
             </div>
 
             <div class="card contact-card">
-                <h2><span class="icon">💼</span>Let's Connect</h2>
+                <h2><span class="icon"><img src="target-icon.png" alt="Target" class="header-icon"></span>Let's Connect</h2>
                 <p style="margin-bottom: 25px;">Ready to discuss AI integration, business strategy, or potential collaborations? I'm always eager to explore how emerging technologies can transform business operations.</p>
                 <div class="contact-info">
-                    <a href="mailto:vivekmishra261105@gmail.com" class="contact-item">
-                        📧 Get In Touch
-                    </a>
-                    <a href="https://www.linkedin.com/in/vivek-mishra-295466331/" class="contact-item">
-                        💼 LinkedIn Profile
-                    </a>
-                    <a href= "tel:+916397540110" class="contact-item">
-                        🌐 Call Me
-                    </a>
-                </div>
+    <a href="vivekmishra261105@gmail.com" class="contact-item" target="_blank">
+        <img src="mail.png" alt="gmail" class="contact-icon">
+        <span>Get In Touch</span>
+    </a>
+    <a href="https://www.linkedin.com/in/vivek-mishra-295466331" class="contact-item" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="contact-icon">
+        <span>LinkedIn Profile</span>
+    </a>
+    <a href="tel:+916397540110" class="contact-item">
+        <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Phone" class="contact-icon">
+        <span>Call Me</span>
+    </a>
+</div>
             </div>
         </div>
 
